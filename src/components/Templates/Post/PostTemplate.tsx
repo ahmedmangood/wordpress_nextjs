@@ -20,7 +20,7 @@ export default async function PostTemplate({ node }: TemplateProps) {
       <h1 className={styles.title}>{post.title}</h1>
       <div className={styles.author}>By {post.author?.node.name}</div>
 
-      <div dangerouslySetInnerHTML={{ __html: post.content || "" }} />
+      <div dangerouslySetInnerHTML={{ __html: post?.content || "" }} />
     </div>
   );
 }
